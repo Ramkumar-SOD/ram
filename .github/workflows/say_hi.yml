@@ -1,0 +1,16 @@
+name: Say Hi Ram
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+jobs:
+  say_hi:
+    if: github.ref == 'refs/heads/main' 
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Print message
+        run: echo "Hi Ram"
